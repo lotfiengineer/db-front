@@ -1,9 +1,24 @@
+import { BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+
+import StudentsPage from "./pages/StudentsPage/StudentsPage";
+import CoursesPage from "./pages/CoursesPage/CoursesPage";
+import ProfessorPage from "./pages/ProfessorPage/ProfessorPage";
+import HomePage from "./pages/HomePage/HomePage";
+import CustomAppBar from "./common/CustomAppBar/CustomAppBar";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Fearless</h1>
-    </div>
+    <BrowserRouter>
+      <CustomAppBar />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="professors" element={<ProfessorPage />} />
+        <Route path="students" element={<StudentsPage />} />
+        <Route path="courses" element={<CoursesPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
