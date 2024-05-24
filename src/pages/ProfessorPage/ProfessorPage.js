@@ -1,15 +1,42 @@
 import React, { useEffect, useState } from "react";
+import { professorsUrl } from "../../constants/urls";
 
 const ProfessorPage = () => {
-  const [count, setCount] = useState("");
+  const [professorsData, setProfessorsData] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos/") // api for the get request
+    fetch(professorsUrl)
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        setProfessorsData(data);
+      });
   }, []);
 
-  return <div>ProfessorPage</div>;
+  return (
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Professor ID</th>
+            <th>Professor Name</th>
+            <th>Department Name</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {professorsData.map((item) => (
+            <tr key={item.ID}>
+              <th>{item.ID}</th>
+              <th>{item.name}</th>
+              <th>{item.dept_name}</th>
+              <th>{item.salary}</th>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 };
 
 export default ProfessorPage;

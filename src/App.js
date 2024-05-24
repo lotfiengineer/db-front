@@ -12,12 +12,14 @@ function App() {
     <BrowserRouter>
       <CustomAppBar />
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="professors" element={<ProfessorPage />} />
-        <Route path="students" element={<StudentsPage />} />
-        <Route path="courses" element={<CoursesPage />} />
-      </Routes>
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="professors" element={<ProfessorPage />} />
+          <Route path="students" element={<StudentsPage />} />
+          <Route path="courses" element={<CoursesPage />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

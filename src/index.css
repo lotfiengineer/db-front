@@ -7,7 +7,8 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(188, 188, 206);
+  background-color: rgb(244, 255, 227);
+
 }
 
 a {
@@ -18,3 +19,28 @@ a:visited {
   color: white;
 }
 
+.content {
+  margin: 30px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 2px solid #bcb9b9;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #c8c8c8;
+}
+
+thead tr {
+  background-color: #464646;
+  color: white;
+  text-align: center;
+}
