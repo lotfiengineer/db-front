@@ -27,10 +27,10 @@ const ProfessorPage = () => {
         <tbody>
           {professorsData.map((item) => (
             <tr key={item.ID}>
-              <th>{item.ID}</th>
-              <th>{item.name}</th>
-              <th>{item.dept_name}</th>
-              <th>{item.salary}</th>
+              <td>{item.ID}</td>
+              <td>{item.name}</td>
+              <td>{item.dept_name}</td>
+              <td>{item.salary}</td>
             </tr>
           ))}
         </tbody>

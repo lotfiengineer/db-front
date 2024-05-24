@@ -1,7 +1,6 @@
 const headers = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Methods": "OPTIONS, POST, GET, DELETE",
-  "Access-Control-Max-Age": 2592000,
+  "Access-Control-Allow-Methods": "GET, POST, DELETE, OPTIONS",
 };
 
 export default headers;

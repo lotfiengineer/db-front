@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { studentsUrl, departmentsUrl } from "../../constants/urls";
 import "./StudentsPage.css";
+import headers from "../../constants/headers";
 
 const StudentsPage = () => {
   const [studentsData, setStudentsData] = useState([]);
@@ -53,15 +54,27 @@ const StudentsPage = () => {
 
     fetch(studentsUrl, {
       method: "POST",
-      // headers: {
-      //   "Content-Type": "application/json",
-      // },
       body: JSON.stringify(newStudent),
     }).then((res) => {
       getStudents();
 
-      console.log("it is working");
+      console.log("it is working - added");
     });
+  };
+
+  const handleDelete = async (id) => {
+    fetch(studentsUrl + "/" + id, {
+      method: "DELETE", // Method itself
+      headers: {
+        "Content-type": "application/json; charset=UTF-8", // Indicates the content
+      },
+    });
+
+    setTimeout(() => {
+      getStudents();
+
+      console.log("it is working - deleted");
+    }, 300);
   };
 
   const showDepartment = () => {
@@ -85,8 +98,6 @@ const StudentsPage = () => {
       </select>
     );
   };
-
-  console.log(newStudent);
 
   return (
     <div className="students_page">
@@ -156,16 +167,38 @@ const StudentsPage = () => {
             <th>Student Name</th>
             <th>Department Name</th>
             <th>Total Credit</th>
+            <th></th>
           </tr>
         </thead>
 
         <tbody>
           {studentsData.map((item) => (
             <tr key={item.ID}>
-              <th>{item.ID}</th>
-              <th>{item.name}</th>
-              <th>{item.dept_name}</th>
-              <th>{item.tot_cred}</th>
+              <td>{item.ID}</td>
+              <td>{item.name}</td>
+              <td>{item.dept_name}</td>
+              <td>{item.tot_cred}</td>
+              <td
+                style={{
+                  textAlign: "center",
+                }}
+              >
+                <button
+                  onClick={() => {
+                    handleDelete(item.ID);
+                  }}
+                  style={{
+                    background: "#D22600",
+                    color: "white",
+                    border: "none",
+                    padding: "7px 10px",
+                    cursor: "pointer",
+                    borderRadius: "5px",
+                  }}
+                >
+                  Delete
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>

@@ -27,10 +27,10 @@ const CoursesPage = () => {
         <tbody>
           {coursesData.map((item) => (
             <tr key={item.ID}>
-              <th>{item.course_id}</th>
-              <th>{item.title}</th>
-              <th>{item.dept_name}</th>
-              <th>{item.credits}</th>
+              <td>{item.course_id}</td>
+              <td>{item.title}</td>
+              <td>{item.dept_name}</td>
+              <td>{item.credits}</td>
             </tr>
           ))}
         </tbody>
