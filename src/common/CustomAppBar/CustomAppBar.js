@@ -15,11 +15,11 @@ export default function CustomAppBar() {
           </Button>
           &nbsp; &nbsp;
           <Button color="inherit">
-            <Link to="Students">Students</Link>
+            <Link to="students">Students</Link>
           </Button>
           &nbsp; &nbsp;
           <Button color="inherit">
-            <Link to="Courses">Courses</Link>
+            <Link to="courses">Courses</Link>
           </Button>
           &nbsp; &nbsp;
           <Button color="inherit">
@@ -27,7 +27,7 @@ export default function CustomAppBar() {
           </Button>
           &nbsp; &nbsp;
           <Button color="inherit">
-            <Link to="">Students Grade</Link>
+            <Link to="students-grade">Students Grade</Link>
           </Button>
         </Toolbar>
       </AppBar>

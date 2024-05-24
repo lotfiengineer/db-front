@@ -10,6 +10,11 @@ body {
   background-color: rgb(244, 255, 227);
 }
 
+select {
+  padding: 5px;
+  cursor: pointer;
+}
+
 input[type="submit"] {
   padding: 4px 10px;
 }

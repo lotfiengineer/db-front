@@ -6,6 +6,7 @@ import CoursesPage from "./pages/CoursesPage/CoursesPage";
 import ProfessorPage from "./pages/ProfessorPage/ProfessorPage";
 import HomePage from "./pages/HomePage/HomePage";
 import CustomAppBar from "./common/CustomAppBar/CustomAppBar";
+import StudentsGrade from "./pages/StudentsGrade/StudentsGrade";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="professors" element={<ProfessorPage />} />
           <Route path="students" element={<StudentsPage />} />
           <Route path="courses" element={<CoursesPage />} />
+          <Route path="students-grade" element={<StudentsGrade />} />
         </Routes>
       </div>
     </BrowserRouter>
