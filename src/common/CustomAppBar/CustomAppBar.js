@@ -23,7 +23,7 @@ export default function CustomAppBar() {
           </Button>
           &nbsp; &nbsp;
           <Button color="inherit">
-            <Link to="">Students of Professors</Link>
+            <Link to="students-of-professors">Students of Professors</Link>
           </Button>
           &nbsp; &nbsp;
           <Button color="inherit">

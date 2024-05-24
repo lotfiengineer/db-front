@@ -5,6 +5,7 @@ var studentsUrl = baseUrl + "/students";
 var coursesUrl = baseUrl + "/courses";
 var departmentsUrl = baseUrl + "/departments";
 var studentsGradeUrl = baseUrl + "/studentsGrade";
+var studentsOfProfessorsUrl = baseUrl + "/studentsOfProfessors";
 
 export {
   professorsUrl,
@@ -12,4 +13,5 @@ export {
   coursesUrl,
   departmentsUrl,
   studentsGradeUrl,
+  studentsOfProfessorsUrl,
 };

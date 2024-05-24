@@ -7,6 +7,7 @@ import ProfessorPage from "./pages/ProfessorPage/ProfessorPage";
 import HomePage from "./pages/HomePage/HomePage";
 import CustomAppBar from "./common/CustomAppBar/CustomAppBar";
 import StudentsGrade from "./pages/StudentsGrade/StudentsGrade";
+import StudentsOfProfessorsPage from "./pages/StudentsOfProfessorsPage/StudentsOfProfessorsPage";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
           <Route path="professors" element={<ProfessorPage />} />
           <Route path="students" element={<StudentsPage />} />
           <Route path="courses" element={<CoursesPage />} />
+          <Route
+            path="students-of-professors"
+            element={<StudentsOfProfessorsPage />}
+          />
           <Route path="students-grade" element={<StudentsGrade />} />
         </Routes>
       </div>
